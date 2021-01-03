@@ -14,11 +14,41 @@ var yesLower;
 var yesUpper;
 
 // create function for generatePassword
-// within the function, you need the following:
-// prompt for password length and validation for prompt (needs to be between 8-128 characters)
-// confirmation of use of special characters, lower case, upper case, and/or numbers with validation for at least one
-// create string of characters for loop to choose from based on user input
-// randomly generate string from available characters (can use for loop)
+function generatePassword() {
+    // set up variables first
+    var passConcat = "";
+    var yesSpecial = confirm("Click OK to include special characters");
+    var yesNumber = confirm("Click OK to include numbers");
+    var yesLower = confirm("Click OK to confirm lower case letters");
+    var yesUpper = confirm("Click OK to confirm upper case letters");
+    // need to add another while loop here to make sure at least one parameter is chosen
+    
+    var length = (prompt("Choose a password length between 8-128"));
+    while(length < 8 || length > 128) {
+        alert("Password length must be between 8-128 characters");
+        var length = (prompt("Choose a password length between 8-128"));
+        } 
+   
+    // create string with all parameters that are confirmed
+    if (yesSpecial) {
+        // add something to concat the special characters to the passConcat
+    }
 
+    if (yesNumber) {
+        // add something to concat the numbers to the passConcat
+    }
+
+    if (yesLower) {
+        // add something to concat the lower case letters to the passConcat
+    }
+
+    if (yesUpper) {
+        // add something to concat the upper case letters to the passConcat
+    }
+
+}
+// within the function, you need the following:
+//  create string of characters for loop to choose from based on user input
+// randomly generate string from available characters (can use for loop)
 // write random string to password variable
 // write password variable to box in HTML
