@@ -17,6 +17,7 @@ var yesUpper;
 function generatePassword() {
     // set up variables first
     var passConcat = "";
+    var passRandom = "";
     var yesSpecial = confirm("Click OK to include special characters");
     var yesNumber = confirm("Click OK to include numbers");
     var yesLower = confirm("Click OK to confirm lower case letters");
@@ -45,6 +46,12 @@ function generatePassword() {
     if (yesUpper) {
         // add something to concat the upper case letters to the passConcat
     }
+
+    for (var i=0; i<length; i++) {
+        passRandom = passRandom + passConcat[Math.floor(window.crypto.getRandomValues()*passConcat.length)];
+    }
+
+    return passRandom;
 
 }
 // within the function, you need the following:
