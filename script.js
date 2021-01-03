@@ -58,8 +58,5 @@ function generatePassword() {
     return passRandom;
 
 }
-// within the function, you need the following:
-//  create string of characters for loop to choose from based on user input
-// randomly generate string from available characters (can use for loop)
 // write random string to password variable
 // write password variable to box in HTML
