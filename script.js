@@ -17,7 +17,7 @@ var yesNumber;
 // create function for generatePassword
 function generatePassword() {
     // set up variables first
-    var passConcat = "";
+    var passConcat = [];
     var passRandom = "";
     
     var yesLower = confirm("Click OK to confirm lower case letters");
@@ -60,5 +60,10 @@ function generatePassword() {
 }
 
 // create function to create writePassword variable and write it to box on page (#password)
+function writePassword () {
+    var pass = generatePassword();
+    var passwordString = document.querySelector("#password");
+    passwordString.value = pass;
+}
 
 generateBtn.addEventListener("click", writePassword);
